@@ -1,23 +1,30 @@
-const prompt = require("prompt-sync")();
+
 
 function getComputerChoice() {
     let choices = ["Rock", "Paper", "Scissors"];
     let choice = Math.floor(Math.random() * choices.length);
-    console.log("Computer picked" + " " + choices[choice]);
+    console,log("Computer picked" + " " + choices[choice]);
     return choices[choice];
 }
 
-function userChoice() {
-    const userInput = prompt("Enter your choice (rock, paper, or scissors): ").toLowerCase();
+function userChoice(){
+    let userInput = prompt(
+        "Enter your choice: "
+        ).toLowerCase();
 
-    if (["rock", "paper", "scissors"].includes(userInput)) {
-        console.log("You Picked " + userInput);
-        return userInput;
-    } else {
-        console.log("Invalid Input");
-        return null; // Return null for invalid input
+        if (userInput == "rock") {
+            console.log("You Picked Rock");
+            return "rock";
+        }else if (userInput == "paper") {
+            console.log("You Picked Paper");
+            return "paper"
+        }else if (userInput == "scissors") {
+            console.log("You Picked Scissors");
+            return "scissors"
+        } else {
+            console.log("Invalid Input");
+        }            
     }
-}
 
     function game() {
         let playerSelection = userChoice();
