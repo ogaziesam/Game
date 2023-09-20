@@ -27,10 +27,10 @@ function userChoice() {
             console.log("Its a Tie try Again");
         } else if (playerSelection === "rock") {
             if (computerSelection === "scissors") {
-                console.log("You Win");
+                console.log("You Win, Rock breaks Scissors");
                 return "win"
             } else if (computerSelection === "paper") {
-                console.log("You Lose");
+                console.log("You Lose, Scissors cuts Paper");
                 return "lose"
             } else if (computerSelection === "rock") {
                 console.log("Its a Tie");
@@ -38,10 +38,10 @@ function userChoice() {
             }
         } else if (playerSelection === "paper") {
             if (computerSelection === "rock") {
-                console.log("You Win");
+                console.log("You Win , Paper covers Rock");
                 return "win"
             } else if (computerSelection === "scissors") {
-                console.log("You Lose");
+                console.log("You Lose, Scissors cuts Paper");
                 return "lose"
             } else if (computerSelection === "paper") {
                 console.log("Its a Tie");
@@ -49,10 +49,10 @@ function userChoice() {
             }
         } else if (playerSelection === "scissors") {
             if (computerSelection === "paper") {
-                console.log("You Win");
+                console.log("You Win, Scissors cuts Paper");
                 return "win"
             } else if (computerSelection === "rock") {
-                console.log("You Lose");
+                console.log("You Lose, Rock breaks Scissors");
                 return "lose"
             } else if (computerSelection === "scissors") {
                 console.log("Its a Tie");
@@ -63,25 +63,4 @@ function userChoice() {
         }
     }
     
-    function play() {
-        let round = 0;
-        let userScore = 0;
-        let compScore = 0;
-
-        for (let i = 1; i <= 5; i++) {
-            let games = game();
-            if (games ==="win") {
-                userScore++;
-                round++;
-                console.log(
-                    `Round: ${round}, userScore = ${userScore} : ${compScore} compScore`
-                );
-            } else {
-                round++;
-                console.log(
-                    `Round: ${round}, userScore = ${userScore} : ${compScore} compScore`
-                );
-            }
-        }
-    }
     play();
